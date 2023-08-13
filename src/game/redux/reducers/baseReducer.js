@@ -1,4 +1,4 @@
-import { SET_LOADING } from '../constants'
+import { SET_LOADING } from 'reduxConstants'
 import createReducer from '../createReducer'
 
 const initialState = {

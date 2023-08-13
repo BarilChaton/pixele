@@ -1,4 +1,4 @@
-import { SET_DIMENSIONS } from '../constants'
+import { SET_DIMENSIONS } from 'reduxConstants'
 import createReducer from '../createReducer'
 
 const initialState = {

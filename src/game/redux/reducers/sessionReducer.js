@@ -1,4 +1,4 @@
-import { SET_DEVELOPER_MODE } from '../constants'
+import { SET_DEVELOPER_MODE } from 'reduxConstants'
 import createReducer from '../createReducer'
 
 const initialState = {

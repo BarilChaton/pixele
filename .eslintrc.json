@@ -1,0 +1,52 @@
+{
+    "ecmaFeatures": {
+        "modules": true,
+        "spread": true,
+        "restParams": true
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "node": true,
+        "es6": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "@electron-internal"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "babelOptions": {
+            "parserOpts": {
+                "allowImportExportEverywhere": true
+            }
+        }
+    },
+    "plugins": [
+        "react",
+        "import"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "no-unused-vars" : "error",
+        "no-undef" : "error"
+    }
+}

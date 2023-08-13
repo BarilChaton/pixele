@@ -3,10 +3,11 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": true,
   "editor.insertSpaces": true,
+  "editor.defaultFormatter": "eslint",
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2,
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
@@ -14,5 +15,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.renderWhitespace": "none",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "eslint",
+  }
 }

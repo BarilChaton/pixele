@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { dispatch } from 'reduxActions'
 import React from 'react'
-import { Stage, Container } from 'react-pixi-fiber'
+import { Stage, Container } from '@pixi/react'
 import { useLayoutEffect, useRef } from 'react'
-//import PixiTestComponent from './pixiTestComponent'
+import PixiTestComponent from './pixiTestComponent'
 
 const Layout = (props) => {
   const { developerMode, dimensions, dispatch } = props
@@ -11,7 +11,7 @@ const Layout = (props) => {
 
   useLayoutEffect(() => {
     if (developerMode) {
-      globalThis.__PIXI_APP__ = stageRef.current._app
+      globalThis.__PIXI_APP__ = stageRef.current.app
 
       window.dispatch = dispatch
     }
@@ -25,9 +25,9 @@ const Layout = (props) => {
   const height = dimensions ? dimensions.height : window.innerHeight
 
   const stageProps = {
+    width,
+    height,
     options: {
-      width,
-      height,
       prepare,
       resolution: dimensions ? dimensions.dpr : 1,
       legacy: true,
@@ -44,7 +44,7 @@ const Layout = (props) => {
           name: "Game Area",
           eventMode: 'auto'
         }}>
-          {/* <PixiTestComponent /> */}
+          <PixiTestComponent />
       </Container>
     </Stage>
   )

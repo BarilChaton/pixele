@@ -1,4 +1,4 @@
-import { ON_INIT, SET_LOADING, LOAD_ASSETS, LOAD_SOUNDS } from './constants'
+import { ON_INIT, LOAD_ASSETS } from 'reduxConstants'
 import { setDimensions } from 'reduxActions'
 import { all, put, take, takeEvery } from 'redux-saga/effects'
 import { Assets } from '../index'
@@ -23,6 +23,7 @@ function* loadAssets() {
 
   if (Assets.length > 0) {
     Assets.forEach((asset, index) => {
+      assetCount = index
       console.log(asset, index);
     })
   }

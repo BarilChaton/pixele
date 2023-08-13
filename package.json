@@ -19,6 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
     "@electron-forge/cli": "^6.2.1",
     "@electron-forge/maker-deb": "^6.2.1",
@@ -32,17 +33,19 @@
     "css-loader": "^6.8.1",
     "electron": "25.4.0",
     "electron-devtools-installer": "^3.2.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-webpack-plugin": "^4.0.1",
     "node-loader": "^2.0.0",
     "style-loader": "^3.3.3"
   },
   "dependencies": {
+    "@pixi/react": "^7.1.0",
     "@reduxjs/toolkit": "^1.9.5",
     "electron-squirrel-startup": "^1.0.0",
-    "pixi.js": "^6.5.1",
-    "prop-types": "^15.8.1",
+    "pixi.js": "^7.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-pixi-fiber": "^1.0.1",
     "react-redux": "^8.1.2",
     "redux": "^4.2.1",
     "redux-saga": "^1.2.3"

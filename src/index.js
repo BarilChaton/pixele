@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import store from './game/redux/store'
-import Game, { Reducer } from './game/index'
+import Game, { Reducer, Assets } from './game/index'
 
 const props = {
   Game,

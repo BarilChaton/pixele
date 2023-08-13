@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import * as PIXI from 'pixi.js'
 import Layout from './components/layout/layout'
 import reducer from './redux/reducers/reducer'

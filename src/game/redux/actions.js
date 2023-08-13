@@ -1,6 +1,6 @@
 import { SET_DEVELOPER_MODE, SET_DIMENSIONS, SET_LOADING, LOAD_ASSETS, LOAD_ASSETS_DONE,
   LOAD_SOUNDS, LOAD_SOUNDS_DONE, GAME_READY
-} from './constants'
+} from 'reduxConstants'
 
 // Loading
 export function setLoading(loading) {
