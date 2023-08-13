@@ -1,14 +1,16 @@
 import React from 'react'
+import { Loop } from './utils/loop'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import store from './game/redux/store'
-import Game, { Reducer, Assets } from './game/index'
+import Game, { Reducer, Sagas, Assets } from './game/index'
 
-console.log(Assets);
+Loop()
 
 const props = {
   Game,
   Assets,
+  Sagas,
   Reducer
 }
 

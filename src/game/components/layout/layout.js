@@ -8,7 +8,6 @@ import PixiTestComponent from './pixiTestComponent'
 const Layout = (props) => {
   const { developerMode, dimensions, dispatch } = props
   const stageRef = useRef()
-  const testRef = useRef()
 
   useLayoutEffect(() => {
     if (developerMode) {
@@ -45,13 +44,13 @@ const Layout = (props) => {
           name: "Game Area",
           eventMode: 'auto'
         }}>
-          <PixiTestComponent ref={testRef}/>
+          <PixiTestComponent {...{}}/>
       </Container>
     </Stage>
   )
 }
 
-export default connect((state) => ({
+export default connect(state => ({
   developerMode: state.session.developerMode,
   dimensions: state.UI.dimensions
-}),{ dispatch })(Layout)
+}), { dispatch })(Layout)

@@ -1,21 +1,52 @@
-import React, { useLayoutEffect, useState } from 'react'
-import { Graphics } from '@pixi/react'
+import { connect } from 'react-redux'
+import React, { useLayoutEffect, useState, useRef } from 'react'
+import { Container, Sprite } from '@pixi/react'
+import { Texture } from 'pixi.js'
+import { Tween, Easing } from '@tweenjs/tween.js'
 
 const PixiTestComponent = () => {
 
+  const testRef = useRef()
+  const moveTween = useRef()
+  const rotTween = useRef()
   const [ testGraphic, createTestGraphic ] = useState()
 
   useLayoutEffect(() => {
-    if (testGraphic) {
-      testGraphic.clear()
-        .beginFill(0xFF0000)
-        .drawRect(0, 0, 150, 150)
-        .endFill()
-    }
-  }, [ testGraphic ])
+    moveTween.current = new Tween(testRef.current.scale)
+      .to({ x: 3, y: 3 }, 2500)
+      .yoyo(true)
+      .repeat(Infinity)
+      .easing(Easing.Back.InOut)
+      .start()
+
+    rotTween.current = new Tween(testRef.current)
+      .to({ angle: 360 * 3 }, 2500)
+      .yoyo(true)
+      .repeat(Infinity)
+      .easing(Easing.Back.InOut)
+      .start()
+
+      return () => {
+        moveTween.current = undefined
+        rotTween.current = undefined
+      }
+  }, [])
+
 
   return (
-    <Graphics ref={createTestGraphic}/>
+    <Container {...{
+      ref: testRef,
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+      pivot: {x: 0.5, y: 0.5}
+    }}>
+      <Sprite {...{
+        texture: Texture.WHITE,
+        anchor: 0.5,
+        scale: 5,
+        tint: 0xFF22DD
+      }}/>
+    </Container>
   )
 }
 
