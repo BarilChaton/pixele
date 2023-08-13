@@ -8,6 +8,7 @@ import PixiTestComponent from './pixiTestComponent'
 const Layout = (props) => {
   const { developerMode, dimensions, dispatch } = props
   const stageRef = useRef()
+  const testRef = useRef()
 
   useLayoutEffect(() => {
     if (developerMode) {
@@ -44,7 +45,7 @@ const Layout = (props) => {
           name: "Game Area",
           eventMode: 'auto'
         }}>
-          <PixiTestComponent />
+          <PixiTestComponent ref={testRef}/>
       </Container>
     </Stage>
   )

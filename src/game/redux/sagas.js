@@ -1,5 +1,5 @@
 import { ON_INIT, LOAD_ASSETS } from 'reduxConstants'
-import { setDimensions } from 'reduxActions'
+import { setDimensions, setLoading } from 'reduxActions'
 import { all, put, take, takeEvery } from 'redux-saga/effects'
 import { Assets } from '../index'
 
@@ -22,8 +22,10 @@ function* loadAssets() {
   let assetCount = 0
 
   if (Assets.length > 0) {
+    yield put(setLoading(true))
     Assets.forEach((asset, index) => {
-      assetCount = index
+      assetCount = index + 1
+      console.log(assetCount);
       console.log(asset, index);
     })
   }

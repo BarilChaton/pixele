@@ -42,6 +42,7 @@
   "dependencies": {
     "@pixi/react": "^7.1.0",
     "@reduxjs/toolkit": "^1.9.5",
+    "@tweenjs/tween.js": "^21.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "pixi.js": "^7.2.4",
     "react": "^18.2.0",
