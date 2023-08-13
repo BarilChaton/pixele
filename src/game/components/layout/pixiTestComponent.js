@@ -1,5 +1,4 @@
-import { connect } from 'react-redux'
-import React, { useLayoutEffect, useState, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { Container, Sprite } from '@pixi/react'
 import { Texture } from 'pixi.js'
 import { Tween, Easing } from '@tweenjs/tween.js'
@@ -9,7 +8,6 @@ const PixiTestComponent = () => {
   const testRef = useRef()
   const moveTween = useRef()
   const rotTween = useRef()
-  const [ testGraphic, createTestGraphic ] = useState()
 
   useLayoutEffect(() => {
     moveTween.current = new Tween(testRef.current.scale)
