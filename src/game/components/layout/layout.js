@@ -4,6 +4,7 @@ import React from 'react'
 import { Stage, Container } from '@pixi/react'
 import { useLayoutEffect, useRef } from 'react'
 import PixiTestComponent from './pixiTestComponent'
+import Gameboard from '../gameboard/gameboard'
 
 const Layout = (props) => {
   const { developerMode, dimensions, dispatch } = props
@@ -44,7 +45,11 @@ const Layout = (props) => {
           name: "Game Area",
           eventMode: 'auto'
         }}>
-          <PixiTestComponent />
+          {/* <PixiTestComponent /> */}
+          <Gameboard {...{
+            x: dimensions.width / 2,
+            y: dimensions.height / 2,
+          }}/>
       </Container>
     </Stage>
   )
