@@ -44,7 +44,7 @@ const Layout = (props) => {
           name: "Game Area",
           eventMode: 'auto'
         }}>
-          <PixiTestComponent {...{}}/>
+          <PixiTestComponent />
       </Container>
     </Stage>
   )
