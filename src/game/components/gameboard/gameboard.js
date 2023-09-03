@@ -1,5 +1,4 @@
-import { connect } from 'react-redux'
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import { Container, Sprite } from '@pixi/react'
 import { Texture } from 'pixi.js'
 
@@ -43,7 +42,6 @@ const Gameboard = (props) => {
           width={90}
           height={90}
           tint={cellColor}
-          anchor={0}
         />
       )
 
